@@ -1,0 +1,14 @@
+.header {
+  max-width: 882px;
+  margin: 45px auto 0;
+  border-bottom: 1px solid rgba(84, 84, 84, .7)
+}
+
+@media screen and (max-width: 1279px) {
+
+  .header {
+    max-width: 282px;
+    margin: 28px auto 0;
+    transition-duration: 0.2s;
+  }
+}

@@ -1,0 +1,6 @@
+.element__like {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 6px 1.13px 0 0;
+}
