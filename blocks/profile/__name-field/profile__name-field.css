@@ -1,5 +1,5 @@
 .profile__name-field {
-  font: normal 500 42px 'Inter';
+  font: normal 500 42px 'Inter', Arial, sans-serif;
   line-height: 1.33;
   color: #FFFFFF;
   overflow: hidden;

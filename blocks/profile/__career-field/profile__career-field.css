@@ -1,5 +1,5 @@
 .profile__career-field {
-  font: normal normal 18px 'Inter';
+  font: normal normal 18px 'Inter', Arial, sans-serif;
   line-height: 1.22;
   color: #FFFFFF;
   overflow: hidden;
@@ -14,7 +14,7 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    margin: 14px 0 0;
+    margin: 14px 0 0 24px;
     transition-duration: 0.2s;
   }
 }

@@ -1,7 +1,7 @@
 .popup__save {
   width: 100%;
   min-height: 50px;
-  font: normal normal 18px 'Inter';
+  font: normal normal 18px 'Inter', Arial, sans-serif;
   line-height: 22px;
   text-align: center;
   color: #FFFFFF;

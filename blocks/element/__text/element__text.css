@@ -1,5 +1,5 @@
 .element__text {
-  font: normal 900 24px 'Inter';
+  font: normal 900 24px 'Inter', Arial, sans-serif;
   line-height: 1.21;
   margin: 0;
   overflow: hidden;
