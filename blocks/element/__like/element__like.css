@@ -1,6 +1,8 @@
 .element__like {
-  border: 1px solid #000000;
+  border: none;
+  background: center no-repeat #FFFFFF url(../../../images/element-like.svg) ;
   box-sizing: border-box;
   cursor: pointer;
-  padding: 6px 1.13px 0 0;
-}
+  padding: 11px;
+  }
+
