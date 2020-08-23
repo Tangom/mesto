@@ -1,31 +1,130 @@
-let popup = document.querySelector('.popup');
-let popupClose = popup.querySelector('.popup__close');
-let popupName = popup.querySelector('.popup__field_name');
-let popupCareer = popup.querySelector('.popup__field_career');
-let popupForm = popup.querySelector('.popup__form');
+const popupProfile = document.querySelector('.popup_profile');
+const popupCloseProfile = popupProfile.querySelector('.popup__close_profile');
+const popupName = popupProfile.querySelector('.popup__field_name');
+const popupCareer = popupProfile.querySelector('.popup__field_career');
+const popupFormProfile = popupProfile.querySelector('.popup__form_profile');
 
-let profile = document.querySelector('.profile');
-let popupOpen = profile.querySelector('.profile__edit');
-let profileName = profile.querySelector('.profile__name-field');
-let profileCareer = profile.querySelector('.profile__career-field');
+const popupCard = document.querySelector('.popup_card');
+const popupCloseCard = popupCard.querySelector('.popup__close_card');
+const popupPlace = popupCard.querySelector('.popup__field_place');
+const popupLink = popupCard.querySelector('.popup__field_link');
+const popupFormCard = popupCard.querySelector('.popup__form_card');
 
-function popupToggle() {
-  if (popup.classList.contains('popup_opened')) {
-    popup.classList.remove('popup_opened')
+const popupPhoto = document.querySelector('.popup_photo');
+const popupCloseImage = popupPhoto.querySelector('.popup__close_image');
+const popupText = popupPhoto.querySelector('.popup__text');
+const popupImage = popupPhoto.querySelector('.popup__image');
+
+const profile = document.querySelector('.profile');
+const popupOpenProfile = profile.querySelector('.profile__edit');
+const popupOpenCard = profile.querySelector('.profile__add-image');
+const profileName = profile.querySelector('.profile__name-field');
+const profileCareer = profile.querySelector('.profile__career-field');
+
+const elements = document.querySelector('.elements');
+
+const cards = [{
+    name: 'Сан-Диего',
+    link: './images/SanDiego,UnitedStates.jpg'
+  },
+  {
+    name: 'Уаикато',
+    link: './images/PortWaikato,NewZealand.jpg'
+  },
+  {
+    name: 'Грженско',
+    link: './images/Hřensko,Czechia.jpg'
+  },
+  {
+    name: 'Айл-оф-Скай',
+    link: './images/Skye,UnitedKingdom.jpg'
+  },
+  {
+    name: 'Вернацца',
+    link: './images/Vernazza,Italy.jpg'
+  },
+  {
+    name: 'Пунтаренас',
+    link: './images/Puntarenas,CostaRica.jpg'
+  }
+]
+
+function createElement(link, name) {
+  const template = document.querySelector('.template').content;
+  const element = template.cloneNode(true);
+  const image = element.querySelector('.element__image')
+  const text = element.querySelector('.element__text')
+
+  image.src = link;
+  text.textContent = name;
+
+  image.addEventListener('click', popupImageToggle);
+
+  element.querySelector('.element__like').addEventListener('click', evt => {
+    evt.target.classList.toggle('element__like_active');
+  });
+
+  element.querySelector('.element__deleted').addEventListener('click', evt => {
+    evt.target.closest('.element').remove();
+  });
+  return element;
+}
+
+function popupImageToggle(evt) {
+  if (popupPhoto.classList.contains('popup_opened')) {
+    popupPhoto.classList.remove('popup_opened')
   } else {
-    popup.classList.add('popup_opened');
+    popupPhoto.classList.add('popup_opened');
+    popupText.textContent = evt.target.closest('.element').textContent;
+    popupImage.src = evt.target.src;
+  }
+}
+
+function popupProfileToggle() {
+  if (popupProfile.classList.contains('popup_opened')) {
+    popupProfile.classList.remove('popup_opened')
+  } else {
+    popupProfile.classList.add('popup_opened');
     popupName.value = profileName.textContent;
     popupCareer.value = profileCareer.textContent;
   }
 }
 
-function editProfile(e) {
-  e.preventDefault();
+function editProfile(evt) {
+  evt.preventDefault();
   profileName.textContent = popupName.value;
   profileCareer.textContent = popupCareer.value;
-  popupToggle();
+  popupProfileToggle();
 }
 
-popupOpen.addEventListener('click', popupToggle);
-popupClose.addEventListener('click', popupToggle);
-popupForm.addEventListener('submit', editProfile);
+function popupCardToggle() {
+  if (popupCard.classList.contains('popup_opened')) {
+    popupCard.classList.remove('popup_opened')
+  } else {
+    popupCard.classList.add('popup_opened');
+    popupLink.value = '';
+    popupPlace.value = '';
+  }
+}
+
+function addCard(evt) {
+  evt.preventDefault();
+  elements.prepend(createElement(popupLink.value, popupPlace.value));
+  popupCardToggle();
+}
+
+function addElements() {
+  cards.forEach(element => {
+    elements.append(createElement(element.link, element.name));
+  })
+}
+
+popupOpenProfile.addEventListener('click', popupProfileToggle);
+popupCloseProfile.addEventListener('click', popupProfileToggle);
+popupOpenCard.addEventListener('click', popupCardToggle);
+popupCloseCard.addEventListener('click', popupCardToggle);
+popupCloseImage.addEventListener('click', popupImageToggle);
+popupFormProfile.addEventListener('submit', editProfile);
+popupFormCard.addEventListener('submit', addCard);
+
+addElements();

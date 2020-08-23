@@ -24,59 +24,12 @@
         <button class="profile__edit" type="button">
         </button>
       </div>
-      <button class="profile__add-image" type="button" >
+      <button class="profile__add-image" type="button">
       </button>
     </section>
 
     <section class="elements">
-      <div class="element">
-        <img class="element__image" src="./images/SanDiego,UnitedStates.jpg" alt="США">
-        <div class="element__content">
-          <h2 class="element__text">Сан-Диего</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/PortWaikato,NewZealand.jpg" alt="Новая зеландия">
-        <div class="element__content">
-          <h2 class="element__text">Уаикато</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Hřensko,Czechia.jpg" alt="Чехия">
-        <div class="element__content">
-          <h2 class="element__text">Грженско</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Skye,UnitedKingdom.jpg" alt="Великобритания">
-        <div class="element__content">
-          <h2 class="element__text">Айл-оф-Скай</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Vernazza,Italy.jpg" alt="Италия">
-        <div class="element__content">
-          <h2 class="element__text">Вернацца</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Puntarenas,CostaRica.jpg" alt="Коста рика">
-        <div class="element__content">
-          <h2 class="element__text">Пунтаренас</h2>
-          <button class="element__like" type="button">
-          </button>
-        </div>
-      </div>
+
     </section>
 
   </main>
@@ -85,17 +38,49 @@
     <p class="footer__copyright">© 2020. Александр Чигарев</p>
   </footer>
 
-  <div class="popup">
+  <section class="popup popup_profile">
     <div class="popup__container">
-      <button class="popup__close" type="button"></button>
+      <button class="popup__close popup__close_profile" type="button"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form class="popup__form" name="popup-form">
+      <form class="popup__form popup__form_profile" name="popup-form">
         <input class="popup__field popup__field_name" type="text" name="name-field">
         <input class="popup__field popup__field_career" type="text" name="career-field">
         <button class="popup__save" type="submit">Сохранить</button>
       </form>
     </div>
-  </div>
+  </section>
+
+  <section class="popup popup_card">
+    <div class="popup__container">
+      <button class="popup__close popup__close_card" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form popup__form_card" name="popup-form">
+        <input class="popup__field popup__field_place" type="text" name="place-field" placeholder="Название">
+        <input class="popup__field popup__field_link" type="text" name="link-field" placeholder="Ссылка на картинку">
+        <button class="popup__save" type="submit">Создать</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="popup popup_photo">
+    <div class="popup__container popup__container_photo">
+      <button class="popup__close popup__close_image" type="button"></button>
+      <img class="popup__image" src="" alt="">
+      <h2 class="popup__text"></h2>
+    </div>
+  </section>
+
+  <template class="template">
+    <div class="element">
+      <button class="element__deleted" type="button"></button>
+      <img class="element__image" src="" alt="">
+      <div class="element__content">
+        <h2 class="element__text"></h2>
+        <button class="element__like" type="button">
+        </button>
+      </div>
+    </div>
+  </template>
 
   <script src="./scripts/main.js"></script>
 </body>
