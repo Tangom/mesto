@@ -117,7 +117,7 @@ function togglePopupCard() {
 function addCard(evt) {
   evt.preventDefault();
   elements.prepend(createElement(popupLink.value, popupPlace.value));
-  popupCardToggle();
+  togglePopupCard();
 }
 
 function addElements() {
@@ -130,7 +130,7 @@ popupOpenProfile.addEventListener('click', togglePopupProfile);
 popupCloseProfile.addEventListener('click', togglePopupProfile);
 popupOpenCard.addEventListener('click', togglePopupCard);
 popupCloseCard.addEventListener('click', togglePopupCard);
-popupCloseImage.addEventListener('click', togglePopupImage);
+popupCloseImage.addEventListener('click',() => togglePopup(popupPhoto));
 popupFormProfile.addEventListener('submit', editProfile);
 popupFormCard.addEventListener('submit', addCard);
 
