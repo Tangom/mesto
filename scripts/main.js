@@ -64,7 +64,7 @@ function createElement(link, name) {
   image.alt = name
   text.textContent = name;
 
-  image.addEventListener('click', togglePopupImage);
+  image.addEventListener('click', openPopupImage);
 
   element.querySelector('.element__like').addEventListener('click', evt => {
     evt.target.classList.toggle('element__like_active');
@@ -76,48 +76,36 @@ function createElement(link, name) {
   return element;
 }
 
-function togglePopupImage(evt) {
-  if (popupPhoto.classList.contains('popup_opened')) {
-    togglePopup(popupPhoto);
-  } else {
-    togglePopup(popupPhoto);
-    popupImage.src = evt.target.src;
-    popupImage.alt = evt.target.alt;
-    popupText.textContent = evt.target.alt;
-  }
+function openPopupImage(evt) {
+  togglePopup(popupPhoto);
+  popupImage.src = evt.target.src;
+  popupImage.alt = evt.target.alt;
+  popupText.textContent = evt.target.alt;
 }
 
-function togglePopupProfile() {
-  if (popupProfile.classList.contains('popup_opened')) {
-    togglePopup(popupProfile);
-  } else {
-    togglePopup(popupProfile);
-    popupName.value = profileName.textContent;
-    popupCareer.value = profileCareer.textContent;
-  }
+function openPopupProfile() {
+  togglePopup(popupProfile);
+  popupName.value = profileName.textContent;
+  popupCareer.value = profileCareer.textContent;
 }
 
 function editProfile(evt) {
   evt.preventDefault();
   profileName.textContent = popupName.value;
   profileCareer.textContent = popupCareer.value;
-  togglePopupProfile();
+  togglePopup(popupProfile);
 }
 
-function togglePopupCard() {
-  if (popupCard.classList.contains('popup_opened')) {
-    togglePopup(popupCard);
-  } else {
-    togglePopup(popupCard);
-    popupLink.value = '';
-    popupPlace.value = '';
-  }
+function openPopupCard() {
+  togglePopup(popupCard);
+  popupLink.value = '';
+  popupPlace.value = '';
 }
 
 function addCard(evt) {
   evt.preventDefault();
   elements.prepend(createElement(popupLink.value, popupPlace.value));
-  togglePopupCard();
+  togglePopup(popupCard);
 }
 
 function addElements() {
@@ -126,11 +114,11 @@ function addElements() {
   })
 }
 
-popupOpenProfile.addEventListener('click', togglePopupProfile);
-popupCloseProfile.addEventListener('click', togglePopupProfile);
-popupOpenCard.addEventListener('click', togglePopupCard);
-popupCloseCard.addEventListener('click', togglePopupCard);
-popupCloseImage.addEventListener('click',() => togglePopup(popupPhoto));
+popupOpenProfile.addEventListener('click', openPopupProfile);
+popupCloseProfile.addEventListener('click', () => togglePopup(popupProfile));
+popupOpenCard.addEventListener('click', openPopupCard);
+popupCloseCard.addEventListener('click', () => togglePopup(popupCard));
+popupCloseImage.addEventListener('click', () => togglePopup(popupPhoto));
 popupFormProfile.addEventListener('submit', editProfile);
 popupFormCard.addEventListener('submit', addCard);
 
