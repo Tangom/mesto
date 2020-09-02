@@ -50,8 +50,28 @@ const cards = [{
   }
 ]
 
-function togglePopup(mod) {
-  mod.classList.toggle('popup_opened')
+function openPopup(mod) {
+  mod.classList.add('popup_opened')
+  addListener(mod);
+}
+
+function closePopup(mod) {
+  mod.classList.remove('popup_opened')
+  removeListener(mod);
+}
+
+function removeListener(mod) {
+  mod.removeEventListener('click', closePopupOverlay);
+  document.removeEventListener('keydown', closePopupEsc);
+}
+
+function addListener(mod) {
+  mod.addEventListener('click', closePopupOverlay);
+  document.addEventListener('keydown', closePopupEsc);
+}
+
+function makeLike(evt) {
+  evt.target.classList.toggle('element__like_active');
 }
 
 function createElement(link, name) {
@@ -65,11 +85,7 @@ function createElement(link, name) {
   text.textContent = name;
 
   image.addEventListener('click', openPopupImage);
-
-  element.querySelector('.element__like').addEventListener('click', evt => {
-    evt.target.classList.toggle('element__like_active');
-  });
-
+  element.querySelector('.element__like').addEventListener('click', makeLike);
   element.querySelector('.element__deleted').addEventListener('click', evt => {
     evt.target.closest('.element').remove();
   });
@@ -77,14 +93,14 @@ function createElement(link, name) {
 }
 
 function openPopupImage(evt) {
-  togglePopup(popupPhoto);
+  openPopup(popupPhoto);
   popupImage.src = evt.target.src;
   popupImage.alt = evt.target.alt;
   popupText.textContent = evt.target.alt;
 }
 
 function openPopupProfile() {
-  togglePopup(popupProfile);
+  openPopup(popupProfile);
   popupName.value = profileName.textContent;
   popupCareer.value = profileCareer.textContent;
   checkOpenPopup(popupProfile);
@@ -94,11 +110,11 @@ function editProfile(evt) {
   evt.preventDefault();
   profileName.textContent = popupName.value;
   profileCareer.textContent = popupCareer.value;
-  togglePopup(popupProfile);
+  closePopup(popupProfile);
 }
 
 function openPopupCard() {
-  togglePopup(popupCard);
+  openPopup(popupCard);
   popupLink.value = '';
   popupPlace.value = '';
   checkOpenPopup(popupCard);
@@ -106,20 +122,20 @@ function openPopupCard() {
 
 function closePopupEsc(evt) {
   if (evt.key === "Escape") {
-    togglePopup(document.querySelector('.popup_opened'));
+    closePopup(document.querySelector('.popup_opened'));
   }
 }
 
 function closePopupOverlay(evt) {
-  if ((evt.target === popupProfile) || (evt.target === popupCard) || (evt.target === popupPhoto)) {
-    togglePopup(document.querySelector('.popup_opened'));
+  if (evt.target.classList.contains('popup')) {
+    closePopup(document.querySelector('.popup_opened'));
   }
 }
 
 function addCard(evt) {
   evt.preventDefault();
   elements.prepend(createElement(popupLink.value, popupPlace.value));
-  togglePopup(popupCard);
+  closePopup(popupCard);
 }
 
 function addElements() {
@@ -129,13 +145,11 @@ function addElements() {
 }
 
 popupOpenProfile.addEventListener('click', openPopupProfile);
-popupCloseProfile.addEventListener('click', () => togglePopup(popupProfile));
+popupCloseProfile.addEventListener('click', () => closePopup(popupProfile));
 popupOpenCard.addEventListener('click', openPopupCard);
-popupCloseCard.addEventListener('click', () => togglePopup(popupCard));
-popupCloseImage.addEventListener('click', () => togglePopup(popupPhoto));
+popupCloseCard.addEventListener('click', () => closePopup(popupCard));
+popupCloseImage.addEventListener('click', () => closePopup(popupPhoto));
 popupFormProfile.addEventListener('submit', editProfile);
 popupFormCard.addEventListener('submit', addCard);
-document.addEventListener('keydown', closePopupEsc);
-document.addEventListener('click', closePopupOverlay);
 
 addElements();

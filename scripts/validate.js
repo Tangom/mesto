@@ -1,4 +1,4 @@
-const list = {
+const listSelector = {
   formSelector: '.popup__form',
   formSetSelector: '.popup__form-set',
   inputSelector: '.popup__field',
@@ -10,15 +10,15 @@ const list = {
 //Показали ошибку
 const showInputError = (formElement, inputElement, errorMessage) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.add(list.inputErrorClass);
-  errorElement.classList.add(list.errorClass);
+  inputElement.classList.add(listSelector.inputErrorClass);
+  errorElement.classList.add(listSelector.errorClass);
   errorElement.textContent = errorMessage;
 };
 //Убрали ошибку
 const hideInputError = (formElement, inputElement) => {
   const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
-  inputElement.classList.remove(list.inputErrorClass);
-  errorElement.classList.remove(list.errorClass);
+  inputElement.classList.remove(listSelector.inputErrorClass);
+  errorElement.classList.remove(listSelector.errorClass);
   errorElement.textContent = '';
 };
 
@@ -38,17 +38,19 @@ const hasInvalidInput = (inputList) => {
 //Она отключает и включает кнопку
 const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
-    buttonElement.classList.add(list.inactiveButtonClass);
+    buttonElement.classList.add(listSelector.inactiveButtonClass);
+    buttonElement.disabled = true;
   } else {
-    buttonElement.classList.remove(list.inactiveButtonClass);
+    buttonElement.classList.remove(listSelector.inactiveButtonClass);
+    buttonElement.disabled = false;
   }
 }
 //Проверка при открытии окна
 const checkOpenPopup = (mod => {
-  const formElement = mod.querySelector(list.formSelector);
+  const formElement = mod.querySelector(listSelector.formSelector);
   if (formElement != null) {
-    const inputList = Array.from(formElement.querySelectorAll(list.inputSelector));
-    const buttonElement = formElement.querySelector(list.submitButtonSelector);
+    const inputList = Array.from(formElement.querySelectorAll(listSelector.inputSelector));
+    const buttonElement = formElement.querySelector(listSelector.submitButtonSelector);
     toggleButtonState(inputList, buttonElement);
     inputList.forEach((inputElement) => {
       hideInputError(formElement, inputElement);
@@ -57,8 +59,8 @@ const checkOpenPopup = (mod => {
 })
 
 const setEventListeners = (formElement) => {
-  const inputList = Array.from(formElement.querySelectorAll(list.inputSelector));
-  const buttonElement = formElement.querySelector(list.submitButtonSelector);
+  const inputList = Array.from(formElement.querySelectorAll(listSelector.inputSelector));
+  const buttonElement = formElement.querySelector(listSelector.submitButtonSelector);
   // Чтобы проверить состояние кнопки в самом начале
   toggleButtonState(inputList, buttonElement);
 
@@ -85,4 +87,4 @@ const enableValidation = (Object) => {
   });
 };
 
-enableValidation(list);
+enableValidation(listSelector );

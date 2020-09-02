@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../mesto\exportToHTML" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,12 +48,15 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -40,20 +68,51 @@
       <updated>1598630194375</updated>
       <workItem from="1598630203953" duration="1948000" />
       <workItem from="1598633197407" duration="2399000" />
+      <workItem from="1599072468396" duration="85000" />
+      <workItem from="1599072643387" duration="1276000" />
+      <workItem from="1599073943387" duration="201000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598633353395">
+    <state x="310" y="269" key="#Notifications" timestamp="1599072533125">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1598633353395" />
-    <state x="-365" y="0" key="SettingsEditor" timestamp="1598634695022">
+    <state x="310" y="269" key="#Notifications/0.0.1280.984@0.0.1280.984" timestamp="1599072533125" />
+    <state x="382" y="318" key="#Scopes" timestamp="1599073999640">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="-365" y="0" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1598634695022" />
+    <state x="382" y="318" key="#Scopes/0.0.1280.984@0.0.1280.984" timestamp="1599073999640" />
+    <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599073720335">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1599073720335" />
+    <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599073053225">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.984@0.0.1280.984" timestamp="1599073053225" />
+    <state x="61" y="35" key="SettingsEditor" timestamp="1599073151925">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="61" y="35" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599073151925" />
+    <state x="212" y="217" key="run.anything.popup" timestamp="1599072864431">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="212" y="217" key="run.anything.popup/0.0.1280.984@0.0.1280.984" timestamp="1599072864431" />
   </component>
 </project>
