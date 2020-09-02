@@ -87,6 +87,7 @@ function openPopupProfile() {
   togglePopup(popupProfile);
   popupName.value = profileName.textContent;
   popupCareer.value = profileCareer.textContent;
+  checkOpenPopup(popupProfile);
 }
 
 function editProfile(evt) {
@@ -100,6 +101,19 @@ function openPopupCard() {
   togglePopup(popupCard);
   popupLink.value = '';
   popupPlace.value = '';
+  checkOpenPopup(popupCard);
+}
+
+function closePopupEsc(evt) {
+  if (evt.key === "Escape") {
+    togglePopup(document.querySelector('.popup_opened'));
+  }
+}
+
+function closePopupOverlay(evt) {
+  if ((evt.target === popupProfile) || (evt.target === popupCard) || (evt.target === popupPhoto)) {
+    togglePopup(document.querySelector('.popup_opened'));
+  }
 }
 
 function addCard(evt) {
@@ -121,5 +135,7 @@ popupCloseCard.addEventListener('click', () => togglePopup(popupCard));
 popupCloseImage.addEventListener('click', () => togglePopup(popupPhoto));
 popupFormProfile.addEventListener('submit', editProfile);
 popupFormCard.addEventListener('submit', addCard);
+document.addEventListener('keydown', closePopupEsc);
+document.addEventListener('click', closePopupOverlay);
 
 addElements();
