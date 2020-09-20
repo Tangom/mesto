@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,7 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,16 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Tangom/mesto" />
+      </set>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/scripts/main.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -51,9 +67,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="CONST" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Node.js.main.js">
+    <configuration name="FormValidator.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/FormValidator.js" working-dir="$PROJECT_DIR$/scripts">
+      <method v="2" />
+    </configuration>
+    <configuration name="main.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/main.js" working-dir="$PROJECT_DIR$/scripts">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.main.js" />
+        <item itemvalue="Node.js.FormValidator.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,7 +100,22 @@
       <workItem from="1599072643387" duration="1276000" />
       <workItem from="1599073943387" duration="201000" />
       <workItem from="1599203355431" duration="2015000" />
-      <workItem from="1599206343937" duration="35000" />
+      <workItem from="1599206343937" duration="1237000" />
+      <workItem from="1599207629591" duration="1667000" />
+      <workItem from="1599507486197" duration="331000" />
+      <workItem from="1600111914014" duration="3690000" />
+      <workItem from="1600115688850" duration="644000" />
+      <workItem from="1600156509870" duration="3518000" />
+      <workItem from="1600170934262" duration="1492000" />
+      <workItem from="1600203934351" duration="511000" />
+      <workItem from="1600244203483" duration="14521000" />
+      <workItem from="1600327004037" duration="106000" />
+      <workItem from="1600327252725" duration="11449000" />
+      <workItem from="1600421856919" duration="2447000" />
+      <workItem from="1600456482954" duration="7753000" />
+      <workItem from="1600498846424" duration="17440000" />
+      <workItem from="1600590377414" duration="5198000" />
+      <workItem from="1600621762990" duration="17671000" />
     </task>
     <servers />
   </component>
@@ -89,10 +135,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="310" y="269" key="#Notifications" timestamp="1599072533125">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="496" y="305" key="#Notifications" timestamp="1600112275556">
+      <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="310" y="269" key="#Notifications/0.0.1280.984@0.0.1280.984" timestamp="1599072533125" />
+    <state x="496" y="305" key="#Notifications/0.0.2048.1114@0.0.2048.1114" timestamp="1600112275556" />
     <state x="382" y="318" key="#Scopes" timestamp="1599073999640">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -101,21 +148,59 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1599073720335" />
+    <state x="783" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1599507781358">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="783" y="205" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1114@0.0.2048.1114" timestamp="1599507781358" />
     <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1599073053225">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.984@0.0.1280.984" timestamp="1599073053225" />
-    <state x="428" y="205" key="FileChooserDialogImpl" timestamp="1599205578547">
-      <screen x="0" y="0" width="1280" height="984" />
+    <state x="685" y="232" key="FileChooserDialogImpl" timestamp="1600113784844">
+      <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="428" y="205" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1599205578547" />
-    <state x="92" y="0" key="SettingsEditor" timestamp="1599206378494">
+    <state x="685" y="232" key="FileChooserDialogImpl/0.0.2048.1114@0.0.2048.1114" timestamp="1600113784844" />
+    <state width="2022" height="304" key="GridCell.Tab.0.bottom" timestamp="1600466734969">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state width="2022" height="304" key="GridCell.Tab.0.bottom/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
+    <state width="2022" height="304" key="GridCell.Tab.0.center" timestamp="1600466734969">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state width="2022" height="304" key="GridCell.Tab.0.center/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
+    <state width="2022" height="304" key="GridCell.Tab.0.left" timestamp="1600466734969">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state width="2022" height="304" key="GridCell.Tab.0.left/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
+    <state width="2022" height="304" key="GridCell.Tab.0.right" timestamp="1600466734969">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state width="2022" height="304" key="GridCell.Tab.0.right/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1600258013463">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="-35" y="50" width="1280" height="920" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599220984923" />
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1600258013463" />
+    <state x="678" y="225" width="675" height="665" key="StructurePopup" timestamp="1600156633681">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="678" y="225" width="675" height="665" key="StructurePopup/0.0.2048.1114@0.0.2048.1114" timestamp="1600156633681" />
+    <state x="92" y="92" width="1096" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599207995084">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="92" y="0" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599206378494" />
+    <state x="92" y="92" width="1096" height="800" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.984@0.0.1280.984" timestamp="1599207995084" />
+    <state x="654" y="0" width="739" height="1114" key="find.popup" timestamp="1600114730478">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="654" y="0" width="739" height="1114" key="find.popup/0.0.2048.1114@0.0.2048.1114" timestamp="1600114730478" />
     <state x="212" y="217" key="run.anything.popup" timestamp="1599072864431">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="212" y="217" key="run.anything.popup/0.0.1280.984@0.0.1280.984" timestamp="1599072864431" />
+    <state x="603" y="79" width="840" height="1034" key="search.everywhere.popup" timestamp="1600156591839">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="603" y="79" width="840" height="1034" key="search.everywhere.popup/0.0.2048.1114@0.0.2048.1114" timestamp="1600156591839" />
   </component>
 </project>
