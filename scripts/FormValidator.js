@@ -2,7 +2,6 @@ export class FormValidator {
   constructor(listSelector, formElement) {
     this._formElement = formElement;
     this._formSelector = listSelector.formSelector;
-    this._formSetSelector = listSelector.formSetSelector;
     this._inputSelector = listSelector.inputSelector;
     this._submitButtonSelector = listSelector.submitButtonSelector;
     this._inactiveButtonClass = listSelector.inactiveButtonClass;
@@ -49,18 +48,6 @@ export class FormValidator {
       buttonElement.disabled = false;
     }
   }
-  //Проверка при открытии окна
-  checkOpenPopup = (mod => {
-    const formElement = mod.querySelector(this._formSelector);
-    if (formElement != null) {
-      const inputList = Array.from(formElement.querySelectorAll(this._inputSelector));
-      const buttonElement = formElement.querySelector(this._submitButtonSelector);
-      this._toggleButtonState(inputList, buttonElement);
-      inputList.forEach((inputElement) => {
-        this._hideInputError(inputElement);
-      })
-    }
-  })
 
   _setEventListeners = () => {
     const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
@@ -69,25 +56,23 @@ export class FormValidator {
     this._toggleButtonState(inputList, buttonElement);
 
     inputList.forEach((inputElement) => {
-      // inputElement.addEventListener('input', inputEventListener)
-      inputElement.addEventListener('input', () => {
-        this._checkInputValidity(inputElement)
-        // Чтобы проверять его при изменении любого из полей
-        this._toggleButtonState(inputList, buttonElement);
-      });
-    });
+        if (this._formElement != null) {
+          this._hideInputError(inputElement)
+        }
+        inputElement.addEventListener('input', () => {
+          this._checkInputValidity(inputElement);
+          // Чтобы проверять его при изменении любого из полей
+          this._toggleButtonState(inputList, buttonElement);
+        });
+      }
+    );
   }
 
   enableValidation = () => {
-    const formList = Array.from(document.querySelectorAll(this._formSelector));
-    formList.forEach(() => {
-      this._formElement.addEventListener('submit', (evt) => {
-        evt.preventDefault();
-      });
-      const fieldsetList = Array.from(this._formElement.querySelectorAll(this._formSetSelector));
-      fieldsetList.forEach((fieldSet) => {
-        this._setEventListeners(fieldSet);
-      });
+    this._formElement.addEventListener('submit', (evt) => {
+      evt.preventDefault();
     });
+    this._setEventListeners();
   };
 };
+

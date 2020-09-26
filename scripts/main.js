@@ -85,7 +85,7 @@ function addListener(mod) {
 
 function removeListener(mod) {
   mod.removeEventListener('click', closePopupOverlay);
-  document.removeEventListener('keydown', closePopupEsc);
+  document.removeEventListener('keyup', closePopupEsc);
 }
 
 function openPopupImage(evt) {
@@ -95,20 +95,11 @@ function openPopupImage(evt) {
   popupText.textContent = evt.target.alt;
 }
 
-//Открытие карточки ???
-// createCards(?).openImage(openPopupImage);
-
-elements.addEventListener('click', (evt) => {
-  if (evt.target.classList.contains('element__image')) {
-    openPopupImage(evt);
-  }
-});
-
 function openPopupProfile() {
   openPopup(popupProfile);
   popupName.value = profileName.textContent;
   popupCareer.value = profileCareer.textContent;
-  validator(popupProfile).checkOpenPopup(popupProfile);
+   validator(popupProfile).enableValidation();
 }
 
 function editProfile(evt) {
@@ -122,7 +113,7 @@ function openPopupCard() {
   openPopup(popupCard);
   popupLink.value = '';
   popupPlace.value = '';
-  validator(popupCard).checkOpenPopup(popupCard);
+   validator(popupCard).enableValidation();
 }
 
 function closePopupEsc(evt) {
@@ -158,3 +149,5 @@ popupFormProfile.addEventListener('submit', editProfile);
 popupFormCard.addEventListener('submit', addCard);
 
 addElements();
+
+export {openPopupImage};

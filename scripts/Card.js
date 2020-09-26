@@ -1,3 +1,5 @@
+import {openPopupImage} from "./main.js";
+
 export class Card {
   constructor(data, cardSelector) {
     this._cardSelector = cardSelector;
@@ -34,6 +36,7 @@ export class Card {
 
   _setEventListeners() {
     this._element.querySelector('.element__like').addEventListener('click', this._makeLike);
+    this._element.querySelector('.element__image').addEventListener('click', openPopupImage);
     this._element.querySelector('.element__deleted').addEventListener('click', evt => {
       evt.target.closest('.element').remove();
     })
