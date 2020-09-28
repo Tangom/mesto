@@ -80,7 +80,7 @@ function closePopup(mod) {
 
 function addListener(mod) {
   mod.addEventListener('click', closePopupOverlay);
-  document.addEventListener('keydown', closePopupEsc);
+  document.addEventListener('keyup', closePopupEsc);
 }
 
 function removeListener(mod) {

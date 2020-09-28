@@ -1,0 +1,20 @@
+{
+  "name": "mesto",
+  "version": "1.0.0",
+  "description": "1. Сделан проект интерактивной страницы, куда можно добавлять фотографии, открывать, удалять их и ставить лайки.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tangom/mesto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tangom/mesto/issues"
+  },
+  "homepage": "https://github.com/Tangom/mesto#readme",
+  "keywords": []
+}
