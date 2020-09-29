@@ -10,7 +10,7 @@ export class FormValidator {
   }
 
   //Показали ошибку
-  _showInputError = (inputElement, errorMessage) => {
+  _showInputError(inputElement, errorMessage){
     const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.add(this._inputErrorClass);
     errorElement.classList.add(this._errorClass);
@@ -18,14 +18,14 @@ export class FormValidator {
   };
 
   //Убрали ошибку
-  _hideInputError = (inputElement) => {
+  _hideInputError(inputElement) {
     const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
     inputElement.classList.remove(this._inputErrorClass);
     errorElement.classList.remove(this._errorClass);
     errorElement.textContent = '';
   };
 
-  _checkInputValidity = (inputElement) => {
+  _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid) {
       this._showInputError(inputElement, inputElement.validationMessage);
     } else {
@@ -33,13 +33,13 @@ export class FormValidator {
     }
   };
   // Проверяем заполнение всех полей
-  _hasInvalidInput = (inputList) => {
+  _hasInvalidInput(inputList){
     return inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   }
   //Она отключает и включает кнопку
-  _toggleButtonState = (inputList, buttonElement) => {
+  _toggleButtonState(inputList, buttonElement){
     if (this._hasInvalidInput(inputList)) {
       buttonElement.classList.add(this._inactiveButtonClass);
       buttonElement.disabled = true;
@@ -49,7 +49,7 @@ export class FormValidator {
     }
   }
 
-  _setEventListeners = () => {
+  _setEventListeners(){
     const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
     const buttonElement = this._formElement.querySelector(this._submitButtonSelector);
     // Чтобы проверить состояние кнопки в самом начале
@@ -68,11 +68,11 @@ export class FormValidator {
     );
   }
 
-  enableValidation = () => {
+  enableValidation(){
     this._formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
     });
     this._setEventListeners();
   };
-};
+}
 

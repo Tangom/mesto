@@ -15,6 +15,78 @@
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__content/element__content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__deleted/element__deleted.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__like/_active/element__like_active.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__like/element__like.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/__text/element__text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/element/element.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_photo/popup__container_photo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__field/_error/popup__field_error.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__field/popup__field.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__form-error/popup__form-error.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__form-set/popup__form-set.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__save/_disabled/popup__save_disabled.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__save/popup__save.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__text/popup__text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_photo/popup_photo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-image/profile__add-image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__career-field/profile__career-field.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit/profile__edit.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__image/profile__image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__input/profile__input.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__name-field/profile__name-field.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/__text/profile__text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/root/root.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/inter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Hřensko,Czechia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/PortWaikato,NewZealand.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Puntarenas,CostaRica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/SanDiego,UnitedStates.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Skye,UnitedKingdom.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Vernazza,Italy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/close-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/close-iconSmall.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/custo-profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/element-deleted.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/element-like.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/like-active.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile-add.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/profile-edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/normalize.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +106,6 @@
       </set>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/scripts/main.js" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -55,9 +124,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\dev\mesto\src\images" />
+    </key>
   </component>
   <component name="RunManager" selected="Node.js.main.js">
     <configuration name="FormValidator.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/scripts/FormValidator.js" working-dir="$PROJECT_DIR$/scripts">
@@ -110,6 +185,7 @@
       <workItem from="1601111827817" duration="5005000" />
       <workItem from="1601118734469" duration="2543000" />
       <workItem from="1601224081289" duration="1199000" />
+      <workItem from="1601358397730" duration="8233000" />
     </task>
     <servers />
   </component>
@@ -156,11 +232,11 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.984@0.0.1280.984" timestamp="1599073053225" />
-    <state x="685" y="232" key="FileChooserDialogImpl" timestamp="1600113784844">
+    <state x="685" y="232" key="FileChooserDialogImpl" timestamp="1601366794951">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="428" y="205" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1599205578547" />
-    <state x="685" y="232" key="FileChooserDialogImpl/0.0.2048.1114@0.0.2048.1114" timestamp="1600113784844" />
+    <state x="685" y="232" key="FileChooserDialogImpl/0.0.2048.1114@0.0.2048.1114" timestamp="1601366794951" />
     <state width="2022" height="304" key="GridCell.Tab.0.bottom" timestamp="1600466734969">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
@@ -177,11 +253,11 @@
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state width="2022" height="304" key="GridCell.Tab.0.right/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1600258013463">
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1601361353905">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="-35" y="50" width="1280" height="920" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599220984923" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1600258013463" />
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1601361353905" />
     <state x="678" y="225" width="675" height="665" key="StructurePopup" timestamp="1600156633681">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
