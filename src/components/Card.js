@@ -1,13 +1,12 @@
-import {openPopupImage} from "./index.js";
-
-export class Card{
-  constructor(data, cardSelector) {
+export class Card {
+  constructor({data, handleCardClick}, cardSelector) {
     this._cardSelector = cardSelector;
     this._link = data.link;
     this._name = data.name;
+    this._handleCardClick = handleCardClick;
   }
 
-  _getTemplate(){
+  _getTemplate() {
     const cardElement = document
       .querySelector(this._cardSelector)
       .content
@@ -17,7 +16,7 @@ export class Card{
     return cardElement;
   }
 
-  generateCard(){
+  generateCard() {
     this._element = this._getTemplate();
     const image = this._element.querySelector('.element__image');
     const text = this._element.querySelector('.element__text');
@@ -26,24 +25,21 @@ export class Card{
     text.textContent = this._name;
 
     this._setEventListeners();
-
     return this._element;
   }
 
-  //   openImage(make){
-  //   this._element.querySelector('.element__image').addEventListener('click', make)
-  // }
-
-  _setEventListeners(){
-    this._element.querySelector('.element__like').addEventListener('click', this._makeLike);
-    this._element.querySelector('.element__image').addEventListener('click', openPopupImage);
-    this._element.querySelector('.element__deleted').addEventListener('click', evt => {
-      evt.target.closest('.element').remove();
-    })
+  _makeLike(evt) {
+    evt.target.classList.toggle('element__like_active');
   }
 
-  _makeLike(evt){
-    evt.target.classList.toggle('element__like_active');
+  _setEventListeners() {
+    this._element.querySelector('.element__like').addEventListener('click', this._makeLike);
+    this._element.querySelector('.element__deleted').addEventListener('click', evt => {
+      evt.target.closest('.element').remove()
+    });
+    this._element.querySelector('.element__image').addEventListener("click", () => {
+      this._handleCardClick({name: this._name, link: this._link})
+    });
   }
 }
 

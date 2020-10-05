@@ -5,88 +5,29 @@
   </component>
   <component name="BranchesTreeState">
     <expand />
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopupWithImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/src/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__content/element__content.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__deleted/element__deleted.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__image/element__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like/_active/element__like_active.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__like/element__like.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/__text/element__text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/element/element.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/elements/elements.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/__copyright/footer__copyright.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__close/popup__close.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/_photo/popup__container_photo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__field/_error/popup__field_error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__field/popup__field.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__form-error/popup__form-error.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__form-set/popup__form-set.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__save/_disabled/popup__save_disabled.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__save/popup__save.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__text/popup__text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/_opened/popup_opened.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/_photo/popup_photo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__add-image/profile__add-image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__career-field/profile__career-field.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__edit/profile__edit.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__image/profile__image.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__input/profile__input.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__name-field/profile__name-field.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__text/profile__text.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/profile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/root/root.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/black/Inter-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/bold/Inter-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/inter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/medium/Inter-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fonts/regular/Inter-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Hřensko,Czechia.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PortWaikato,NewZealand.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Puntarenas,CostaRica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/SanDiego,UnitedStates.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Skye,UnitedKingdom.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/Vernazza,Italy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/close-icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/close-iconSmall.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/custo-profile.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/element-deleted.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/element-like.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/header.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/like-active.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/profile-add.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/profile-edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/FormValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nojekyll" beforeDir="false" afterPath="$PROJECT_DIR$/src/.nojekyll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Popup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/PopupWithForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/PopupWithImage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Section.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +72,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\dev\mesto\src\pages" />
+      <recent name="C:\Users\User\dev\mesto\src" />
       <recent name="C:\Users\User\dev\mesto\src\images" />
     </key>
   </component>
@@ -185,7 +128,12 @@
       <workItem from="1601111827817" duration="5005000" />
       <workItem from="1601118734469" duration="2543000" />
       <workItem from="1601224081289" duration="1199000" />
-      <workItem from="1601358397730" duration="8233000" />
+      <workItem from="1601358397730" duration="8485000" />
+      <workItem from="1601376036913" duration="9801000" />
+      <workItem from="1601475582290" duration="11995000" />
+      <workItem from="1601531241547" duration="10738000" />
+      <workItem from="1601630647110" duration="40770000" />
+      <workItem from="1601911946279" duration="10403000" />
     </task>
     <servers />
   </component>
@@ -224,6 +172,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="90" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1599073720335" />
+    <state x="681" y="332" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601379001032">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="681" y="332" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1114@0.0.2048.1114" timestamp="1601379001032" />
     <state x="783" y="205" key="#com.intellij.ide.util.MemberChooser" timestamp="1599507781358">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
@@ -232,6 +184,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="327" y="313" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.984@0.0.1280.984" timestamp="1599073053225" />
+    <state x="93" y="93" width="1862" height="928" key="DiffContextDialog" timestamp="1601379351275">
+      <screen x="0" y="0" width="2048" height="1114" />
+    </state>
+    <state x="93" y="93" width="1862" height="928" key="DiffContextDialog/0.0.2048.1114@0.0.2048.1114" timestamp="1601379351275" />
     <state x="685" y="232" key="FileChooserDialogImpl" timestamp="1601366794951">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
@@ -253,11 +209,11 @@
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state width="2022" height="304" key="GridCell.Tab.0.right/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1601361353905">
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1601379185627">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="-35" y="50" width="1280" height="920" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599220984923" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1601361353905" />
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1601379185627" />
     <state x="678" y="225" width="675" height="665" key="StructurePopup" timestamp="1600156633681">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
