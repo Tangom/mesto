@@ -2,6 +2,8 @@ import {Card} from './Card.js';
 import {FormValidator} from './FormValidator.js';
 import '../styles/index.css';
 
+
+
 const popup = document.querySelector('.popup');
 const popupProfile = document.querySelector('.popup_profile');
 const popupCloseProfile = popupProfile.querySelector('.popup__close_profile');
@@ -28,31 +30,7 @@ const profileCareer = profile.querySelector('.profile__career-field');
 
 const elements = document.querySelector('.elements');
 
-// const cards = [{
-//   name: 'Сан-Диего',
-//   link: './images/SanDiego,UnitedStates.jpg'
-// },
-//   {
-//     name: 'Уаикато',
-//     link: './images/PortWaikato,NewZealand.jpg'
-//   },
-//   {
-//     name: 'Грженско',
-//     link: './images/Hřensko,Czechia.jpg'
-//   },
-//   {
-//     name: 'Айл-оф-Скай',
-//     link: './images/Skye,UnitedKingdom.jpg'
-//   },
-//   {
-//     name: 'Вернацца',
-//     link: './images/Vernazza,Italy.jpg'
-//   },
-//   {
-//     name: 'Пунтаренас',
-//     link: './images/Puntarenas,CostaRica.jpg'
-//   }
-// ]
+
 import SanDiego from '../images/SanDiego,UnitedStates.jpg';
 import PortWaikato  from'../images/PortWaikato,NewZealand.jpg' ;
 import Hrensko  from '../images/Hřensko,Czechia.jpg';
