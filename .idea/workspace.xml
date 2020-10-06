@@ -9,7 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\dev\mesto" />
       <recent name="C:\Users\User\dev\mesto\src\pages" />
       <recent name="C:\Users\User\dev\mesto\src" />
       <recent name="C:\Users\User\dev\mesto\src\images" />
@@ -115,7 +118,8 @@
       <workItem from="1601475582290" duration="11995000" />
       <workItem from="1601531241547" duration="10738000" />
       <workItem from="1601630647110" duration="40770000" />
-      <workItem from="1601911946279" duration="10787000" />
+      <workItem from="1601911946279" duration="12370000" />
+      <workItem from="1601967323758" duration="4266000" />
     </task>
     <servers />
   </component>

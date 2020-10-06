@@ -55,7 +55,7 @@ const cards = [{
   }
 ]
 
-export const listSelector = {
+const listSelector = {
   formSelector: '.popup__form',
   formSetSelector: '.popup__form-set',
   inputSelector: '.popup__field',
@@ -69,11 +69,13 @@ const photo = new PopupWithImage(popupPhoto);
 const user = new UserInfo(profileName, profileCareer);
 const handleCardClick = (item) => photo.open(item);
 
-const validator = (data) => new FormValidator(listSelector, data.querySelector(listSelector.formSelector));
 const card = (data) => new Card({data, handleCardClick}, '.template');
+const validator = (popup) => new FormValidator(listSelector, popup.querySelector(listSelector.formSelector));
+const cardValidator = validator(popupCard);
+const profileValidator = validator(popupProfile);
 
-validator(popupCard).enableValidation();
-validator(popupProfile).enableValidation();
+cardValidator.enableValidation();
+profileValidator.enableValidation();
 
 function createCard(name, link) {
   return card({name: name, link: link}).generateCard();
@@ -99,7 +101,7 @@ const popupProfileForm = new PopupWithForm({
 const popupCardForm = new PopupWithForm({
   popupSelector: popupCardSelector,
   submitForm: (item) => {
-    section.addItem((createCard(item.place, item.link)),false);
+    section.addItem((createCard(item.place, item.link)), false);
     popupCardForm.close();
   }
 });
@@ -113,10 +115,10 @@ popupOpenProfile.addEventListener('click', () => {
   popupName.value = userInfo.name;
   popupCareer.value = userInfo.info;
   popupProfileForm.open();
-  validator(popupProfile).enableValidation();
+  profileValidator.reset();
 });
 
 popupOpenCard.addEventListener('click', () => {
   popupCardForm.open();
-  validator(popupCard).enableValidation();
+  cardValidator.reset();
 });
