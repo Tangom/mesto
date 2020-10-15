@@ -4,13 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BranchesTreeState">
-    <expand />
-    <select />
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/blocks/element/__deleted/_disable/element__deleted_disable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/element/__content/element__content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/element/__content/element__content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +41,13 @@
   </component>
   <component name="ExportToHTMLSettings">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../mesto\exportToHTML" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,7 +79,7 @@
     <property name="js.last.introduce.type" value="CONST" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -120,6 +148,12 @@
       <workItem from="1601630647110" duration="40770000" />
       <workItem from="1601911946279" duration="12370000" />
       <workItem from="1601967323758" duration="4266000" />
+      <workItem from="1602096579367" duration="6633000" />
+      <workItem from="1602490750427" duration="674000" />
+      <workItem from="1602492402708" duration="21097000" />
+      <workItem from="1602569120687" duration="15275000" />
+      <workItem from="1602657206959" duration="29823000" />
+      <workItem from="1602738692312" duration="7740000" />
     </task>
     <servers />
   </component>
@@ -135,6 +169,17 @@
               <option name="CUSTOM_BOOLEAN_PROPERTIES">
                 <map>
                   <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
                 </map>
               </option>
             </State>
@@ -195,11 +240,11 @@
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state width="2022" height="304" key="GridCell.Tab.0.right/0.0.2048.1114@0.0.2048.1114" timestamp="1600466734969" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1601379185627">
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor" timestamp="1602097380844">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>
     <state x="-35" y="50" width="1280" height="920" key="SettingsEditor/0.0.1280.984@0.0.1280.984" timestamp="1599220984923" />
-    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1601379185627" />
+    <state x="478" y="68" width="1480" height="912" key="SettingsEditor/0.0.2048.1114@0.0.2048.1114" timestamp="1602097380844" />
     <state x="678" y="225" width="675" height="665" key="StructurePopup" timestamp="1600156633681">
       <screen x="0" y="0" width="2048" height="1114" />
     </state>

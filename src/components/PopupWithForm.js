@@ -4,6 +4,7 @@ export class PopupWithForm extends Popup {
   constructor({popupSelector, submitForm}) {
     super(popupSelector);
     this._submitForm = submitForm;
+    this._textSaveButtion = this._popup.querySelector('.popup__save').textContent
   }
 
   _getInputValues() {
@@ -26,5 +27,13 @@ export class PopupWithForm extends Popup {
   close() {
     super.close();
     this._popup.querySelector('.popup__form').reset();
+  }
+
+  loading(waiting) {
+    if (waiting) {
+      this._textSaveButtion = 'Сохранение...';
+    } else {
+      this._textSaveButtion = this._textSaveButtion;
+    }
   }
 }

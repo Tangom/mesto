@@ -2,5 +2,6 @@
     "cSpell.words": [
       
     ],
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "editor.fontSize": 16
 }

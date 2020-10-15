@@ -5,94 +5,123 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Красивые места</title>
-  </head>
+</head>
 
 <body class="root">
 
-<header class="header">
-  <img alt="Логотип заголовка" class="header__logo" src="./images/header.svg">
-</header>
-<main class="content">
-  <section class="profile">
-    <img alt="Кусто" class="profile__image" src="./images/custo-profile.jpg">
-    <div class="profile__input">
-      <div class="profile__text">
-        <h1 class="profile__name-field">Жак-Ив Кусто</h1>
-        <p class="profile__career-field">Исследователь океана</p>
+  <header class="header">
+    <img alt="Логотип заголовка" class="header__logo" src="./images/header.svg">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <button class="profile__edit-image" type="button">
+        <img alt="Портрет" class="profile__image" src="./images/custo-profile.jpg">
+      </button>
+      <div class="profile__input">
+        <div class="profile__text">
+          <h1 class="profile__name-field">Жак-Ив Кусто</h1>
+          <p class="profile__career-field">Исследователь океана</p>
+        </div>
+        <button class="profile__edit" type="button">
+        </button>
       </div>
-      <button class="profile__edit" type="button">
+      <button class="profile__add-image" type="button">
       </button>
+    </section>
+
+    <section class="elements">
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copyright">© 2020. Александр Чигарев</p>
+  </footer>
+
+  <section class="popup popup_profile">
+    <div class="popup__container">
+      <button class="popup__close popup__close_profile" type="button"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form popup__form_profile" name="popup-form" novalidate>
+        <fieldset class="popup__form-set">
+          <input class="popup__field popup__field_name" id='name-input' maxlength="40" minlength="2" name="name"
+            placeholder="Имя" required type="text">
+          <span class='popup__form-error' id='name-input-error'></span>
+          <input class="popup__field popup__field_career" id='career-input' maxlength="200" minlength="2" name="career"
+            placeholder="О себе" required type="text">
+          <span class='popup__form-error' id='career-input-error'></span>
+          <button class="popup__save" type="submit">Сохранить</button>
+        </fieldset>
+      </form>
     </div>
-    <button class="profile__add-image" type="button">
-    </button>
   </section>
 
-  <section class="elements">
-
+  <section class="popup popup_card">
+    <div class="popup__container">
+      <button class="popup__close popup__close_card" type="button"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__form popup__form_card" name="popup-form" novalidate>
+        <fieldset class="popup__form-set">
+          <input class="popup__field popup__field_place" id='place-input' maxlength="30" minlength="1" name="place"
+            placeholder="Название" required type="text">
+          <span class='popup__form-error' id='place-input-error'></span>
+          <input class="popup__field popup__field_link" id='link-input' name="link" placeholder="Ссылка на картинку"
+            required type="url">
+          <span class='popup__form-error' id='link-input-error'></span>
+          <button class="popup__save" type="submit">Создать</button>
+        </fieldset>
+      </form>
+    </div>
   </section>
 
-</main>
-
-<footer class="footer">
-  <p class="footer__copyright">© 2020. Александр Чигарев</p>
-</footer>
-
-<section class="popup popup_profile">
-  <div class="popup__container">
-    <button class="popup__close popup__close_profile" type="button"></button>
-    <h2 class="popup__title">Редактировать профиль</h2>
-    <form class="popup__form popup__form_profile" name="popup-form" novalidate>
-      <fieldset class="popup__form-set">
-        <input class="popup__field popup__field_name" id='name-input' maxlength="40" minlength="2" name="name"
-               placeholder="Имя" required type="text">
-        <span class='popup__form-error' id='name-input-error'></span>
-        <input class="popup__field popup__field_career" id='career-input' maxlength="200" minlength="2"
-               name="career" placeholder="О себе" required type="text">
-        <span class='popup__form-error' id='career-input-error'></span>
-        <button class="popup__save" type="submit">Сохранить</button>
-      </fieldset>
-    </form>
-  </div>
-</section>
-
-<section class="popup popup_card">
-  <div class="popup__container">
-    <button class="popup__close popup__close_card" type="button"></button>
-    <h2 class="popup__title">Новое место</h2>
-    <form class="popup__form popup__form_card" name="popup-form" novalidate>
-      <fieldset class="popup__form-set">
-        <input class="popup__field popup__field_place" id='place-input' maxlength="30" minlength="1"
-               name="place" placeholder="Название" required type="text">
-        <span class='popup__form-error' id='place-input-error'></span>
-        <input class="popup__field popup__field_link" id='link-input' name="link"
-               placeholder="Ссылка на картинку" required type="url">
-        <span class='popup__form-error' id='link-input-error'></span>
-        <button class="popup__save" type="submit">Создать</button>
-      </fieldset>
-    </form>
-  </div>
-</section>
-
-<section class="popup popup_photo">
-  <div class="popup__container popup__container_photo">
-    <button class="popup__close popup__close_image" type="button"></button>
-    <img alt="" class="popup__image" src="#">
-    <h2 class="popup__text"></h2>
-  </div>
-</section>
-
-
-<template class="template">
-  <div class="element">
-    <button class="element__deleted" type="button"></button>
-    <img alt="" class="element__image" src="#">
-    <div class="element__content">
-      <h2 class="element__text"></h2>
-      <button class="element__like" type="button">
-      </button>
+  <section class="popup popup_photo">
+    <div class="popup__container popup__container_photo">
+      <button class="popup__close popup__close_image" type="button"></button>
+      <img alt="" class="popup__image" src="#">
+      <h2 class="popup__text"></h2>
     </div>
-  </div>
-</template>
+  </section>
+
+  <section class="popup popup_avatar">
+    <div class="popup__container">
+      <button class="popup__close popup__close_avatar" type="button"></button>
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form class="popup__form popup__form_avatar" name="popup-form" novalidate>
+        <fieldset class="popup__form-set">
+          <input class="popup__field popup__field_link" id='link-avatar-input' name="link" placeholder="Ссылка на картинку"
+            required type="url">
+          <span class='popup__form-error' id='link-avatar-input-error'></span>
+          <button class="popup__save" type="submit">Сохранить</button>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <section class="popup popup_confirm">
+    <div class="popup__container">
+      <form class="popup__form popup__form_confirm" name="popup-form" novalidate>
+        <button class="popup__close popup__close_confirm" type="button"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <button class="popup__save" type="submit">Да</button>
+      </form>
+    </div>
+  </section>
+
+  <template class="template">
+    <div class="element">
+      <button class="element__deleted" type="button"></button>
+      <img alt="" class="element__image" src="#">
+      <div class="element__content">
+        <h2 class="element__text"></h2>
+        <div class="element__content-like">
+          <button class="element__like" type="button">
+          </button>
+          <output class="element__result">0</output>
+        </div>
+      </div>
+    </div>
+  </template>
 
 </body>
 

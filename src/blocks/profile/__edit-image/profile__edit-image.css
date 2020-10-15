@@ -1,0 +1,17 @@
+.profile__edit-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background-color: #000000;
+  position: relative;
+  z-index: 1;
+}
+
+.profile__edit-image:hover {
+  opacity: 0.2;
+  background: center no-repeat #000000 url(../../../images/profile-avatar.svg);
+cursor: pointer;
+}
