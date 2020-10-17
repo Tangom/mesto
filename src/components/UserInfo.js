@@ -16,10 +16,14 @@ export class UserInfo {
     return userInfo;
   }
 
+
   setUserInfo(data) {
     this._profileName.textContent = data.name;
     this._profileCareer.textContent = data.info;
-    this._profileAvatar.src = data.avatar;
     this._id = data.id;
+  }
+
+  setUserAvatar(data) {
+    this._profileAvatar.src = data.avatar;
   }
 }

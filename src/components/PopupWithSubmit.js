@@ -14,9 +14,21 @@ export class PopupWithSubmit extends Popup {
     })
   }
 
-  open(data) {
+  open(item) {
     super.open();
-    this._data = data;
+    this._item = item;
+  }
+
+  close() {
+    super.close();
+  }
+
+  loading(waiting) {
+    if (waiting) {
+      this._popup.querySelector('.popup__save').textContent = 'Удаление...';
+    } else {
+      this._popup.querySelector('.popup__save').textContent = 'Удалить...';
+    }
   }
 
 }

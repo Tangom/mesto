@@ -9,7 +9,7 @@ export class Api {
       method: 'GET',
       headers: this._headers
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -19,12 +19,13 @@ export class Api {
       .catch((err) => console.log(err));
   }
 
+
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
       method: 'GET',
       headers: this._headers
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -42,7 +43,7 @@ export class Api {
         about: data.about
       })
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -56,7 +57,7 @@ export class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.avatar
+        avatar: data
       })
     }).then((res) => {
       if (res.ok) {
@@ -67,16 +68,16 @@ export class Api {
       .catch((err) => console.log(err));
   }
 
-  postAddCard(data) {
+  postAddCard(item) {
     return fetch(`${this._url}/cards`, {
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
-        name: data.name,
-        link: data.link
+        name: item.name,
+        link: item.link
       })
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -90,7 +91,7 @@ export class Api {
       method: 'DELETE',
       headers: this._headers
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -103,12 +104,13 @@ export class Api {
     return fetch(`${this._url}/cards/likes/${data._id}`, {
       method: 'DELETE',
       headers: this._headers,
-    }).then((res) => {
-      if (res.ok) {
-        return res.json();
-      }
-      return Promise.reject(`Ошибка: ${res.status}`);
     })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+        return Promise.reject(`Ошибка: ${res.status}`);
+      })
       .catch((err) => console.log(err));
   }
 
@@ -117,7 +119,7 @@ export class Api {
       method: 'PUT',
       headers: this._headers
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         }
@@ -130,5 +132,4 @@ export class Api {
     return Promise.all([this.getUser(), this.getInitialCards()]);
   }
 
-// другие методы работы с API
 }

@@ -14,11 +14,8 @@ const popupOpenCard = profile.querySelector('.profile__add-image');
 const popupEditAvatar = profile.querySelector('.profile__edit-image');
 
 const popupAvatar = document.querySelector('.popup_avatar');
-const popupConfirm = document.querySelector('.popup_confirm');
 const popupCard = document.querySelector('.popup_card');
 const popupProfile = document.querySelector('.popup_profile');
-const popupName = popupProfile.querySelector('.popup__field_name');
-const popupCareer = popupProfile.querySelector('.popup__field_career');
 
 const elements = ('.elements');
 const profileName = ('.profile__name-field');
@@ -27,40 +24,41 @@ const profileCareer = ('.profile__career-field');
 const popupProfileSelector = ('.popup_profile');
 const popupAvatarSelector = ('.popup_avatar');
 const popupCardSelector = ('.popup_card');
-const popupPhoto = ('.popup_photo');
+const popupConfirmSelector = ('.popup_confirm');
+const popupPhoto = ('.popup_photo')
 
-import SanDiego from '../images/SanDiego,UnitedStates.jpg';
-import PortWaikato from '../images/PortWaikato,NewZealand.jpg' ;
-import Hrensko from '../images/Hřensko,Czechia.jpg';
-import Skye from '../images/Skye,UnitedKingdom.jpg';
-import Vernazza from '../images/Vernazza,Italy.jpg';
-import Puntarenas from '../images/Puntarenas,CostaRica.jpg';
-
-const cards = [{
-  name: 'Сан-Диего',
-  link: SanDiego
-},
-  {
-    name: 'Уаикато',
-    link: PortWaikato
-  },
-  {
-    name: 'Грженско',
-    link: Hrensko
-  },
-  {
-    name: 'Айл-оф-Скай',
-    link: Skye
-  },
-  {
-    name: 'Вернацца',
-    link: Vernazza
-  },
-  {
-    name: 'Пунтаренас',
-    link: Puntarenas
-  }
-]
+// import SanDiego from '../images/SanDiego,UnitedStates.jpg';
+// import PortWaikato from '../images/PortWaikato,NewZealand.jpg' ;
+// import Hrensko from '../images/Hřensko,Czechia.jpg';
+// import Skye from '../images/Skye,UnitedKingdom.jpg';
+// import Vernazza from '../images/Vernazza,Italy.jpg';
+// import Puntarenas from '../images/Puntarenas,CostaRica.jpg';
+//
+// const cards = [{
+//   name: 'Сан-Диего',
+//   link: SanDiego
+// },
+//   {
+//     name: 'Уаикато',
+//     link: PortWaikato
+//   },
+//   {
+//     name: 'Грженско',
+//     link: Hrensko
+//   },
+//   {
+//     name: 'Айл-оф-Скай',
+//     link: Skye
+//   },
+//   {
+//     name: 'Вернацца',
+//     link: Vernazza
+//   },
+//   {
+//     name: 'Пунтаренас',
+//     link: Puntarenas
+//   }
+// ]
 
 const listSelector = {
   formSelector: '.popup__form',
@@ -71,7 +69,7 @@ const listSelector = {
   inputErrorClass: 'popup__field_error',
   errorClass: 'popup__form-error_active'
 };
-let id = '';
+
 const photo = new PopupWithImage(popupPhoto);
 const user = new UserInfo(profileName, profileCareer, profileAvatar);
 const handleCardClick = (data) => photo.open(data);
@@ -90,7 +88,7 @@ const handleLikeClick = (data) => {
   }
 }
 
-const card = (data) => new Card({data, handleCardClick, handleDeleteCard, handleLikeClick, id}, '.template');
+const card = (data, myId) => new Card({data, handleCardClick, handleDeleteCard, handleLikeClick, myId}, '.template');
 const validator = (popup) => new FormValidator(listSelector, popup.querySelector(listSelector.formSelector));
 const cardValidator = validator(popupCard);
 const profileValidator = validator(popupProfile);
@@ -100,8 +98,8 @@ cardValidator.enableValidation();
 profileValidator.enableValidation();
 avatarValidator.enableValidation();
 
-function createCard(data) {
-  return card(data).generateCard();
+function createCard(data, myId) {
+  return card(data, myId).generateCard();
 }
 
 const api = new Api({
@@ -114,23 +112,49 @@ const api = new Api({
 
 api.getAllData()
   .then(data => {
-    const [userData, cards] = data;
-    id = userData._id;
-    user.setUserInfo(userData);
+    const [profile, cards] = data;
+    const myId = profile._id;
+    user.setUserInfo(profile);
+
+    const section = new Section({
+      items: cards,
+      renderer: (data) => {
+        section.addItem(createCard(data, myId));
+      }
+    }, elements);
+
     section.renderItems();
+
+    const popupCardForm = new PopupWithForm({
+      popupSelector: popupCardSelector,
+      submitForm: (item) => {
+        popupCardForm.loading(true);
+        api.postAddCard({
+          name: item.place,
+          link: item.link
+        })
+          .then((item) => {
+            section.addItem((createCard(item, myId)), false);
+          })
+          .finally(() => {
+            popupCardForm.loading(false);
+            popupCardForm.close();
+          })
+      }
+    });
+
+    popupOpenCard.addEventListener('click', () => {
+      popupCardForm.open();
+      cardValidator.reset();
+    });
+
+    popupCardForm.setEventListeners();
+
   })
 
-const section = new Section({
-  items: cards,
-  renderer: (data) => {
-    section.addItem(createCard(data));
-  }
-}, elements);
-
-section.renderItems();
 
 const popupSubmit = new PopupWithSubmit({
-  popupSelector: popupConfirm,
+  popupSelector: popupConfirmSelector,
   submitForm: (data) => {
     api.deleteCard(data)
       .then(() => {
@@ -146,9 +170,9 @@ const popupAvatarForm = new PopupWithForm({
   popupSelector: popupAvatarSelector,
   submitForm: (data) => {
     popupAvatarForm.loading(true);
-    api.patchUserAvatar(data)
-      .then((res) => {
-        user.setUserInfo(res);
+    api.patchUserAvatar(data.avatar)
+      .then(() => {
+        user.setUserAvatar(data);
       })
       .finally(() => {
         popupAvatarForm.loading(false);
@@ -172,39 +196,19 @@ const popupProfileForm = new PopupWithForm({
   }
 });
 
-const popupCardForm = new PopupWithForm({
-  popupSelector: popupCardSelector,
-  submitForm: (data) => {
-    popupCardForm.loading(true);
-    api.postAddCard(data)
-      .then((data) => {
-        section.addItem((createCard(data)), false);
-      })
-      .finally(() => {
-        popupCardForm.loading(false);
-        popupCardForm.close();
-      })
-  }
-});
-
 popupProfileForm.setEventListeners();
-popupCardForm.setEventListeners();
 popupSubmit.setEventListeners();
 photo.setEventListeners();
-popupEditAvatar.setEventListeners();
+popupAvatarForm.setEventListeners();
 
 popupOpenProfile.addEventListener('click', () => {
-  const userInfo = user.getUserInfo();
-  popupName.value = userInfo.name;
-  popupCareer.value = userInfo.info;
-  popupProfileForm.open();
+  // const userInfo = user.getUserInfo();
+  // popupName.value = userInfo.name;
+  // popupCareer.value = userInfo.info;
+  popupProfileForm.open(user.getUserInfo());
   profileValidator.reset();
 });
 
-popupOpenCard.addEventListener('click', () => {
-  popupCardForm.open();
-  cardValidator.reset();
-});
 
 popupEditAvatar.addEventListener('click', () => {
   popupAvatarForm.open();
