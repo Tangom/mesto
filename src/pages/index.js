@@ -49,6 +49,8 @@ const popupEditAvatar = profile.querySelector('.profile__avatar-image');
 const popupAvatar = document.querySelector('.popup_avatar');
 const popupCard = document.querySelector('.popup_card');
 const popupProfile = document.querySelector('.popup_profile');
+const popupName = document.querySelector('.popup__field_name');
+const popupCareer = document.querySelector('.popup__field_career');
 
 const elements = ('.elements');
 const profileName = ('.profile__name-field');
@@ -204,10 +206,10 @@ photo.setEventListeners();
 popupAvatarForm.setEventListeners();
 
 popupOpenProfile.addEventListener('click', () => {
-  // const userInfo = user.getUserInfo();
-  // popupName.value = userInfo.name;
-  // popupCareer.value = userInfo.info;
-  popupProfileForm.open(user.getUserInfo());
+  const userInfo = user.getUserInfo();
+  popupName.value = userInfo.name;
+  popupCareer.value = userInfo.about;
+  popupProfileForm.open(userInfo);
   profileValidator.reset();
 });
 
