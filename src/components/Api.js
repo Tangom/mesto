@@ -19,7 +19,6 @@ export class Api {
       .catch((err) => console.log(err));
   }
 
-
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
       method: 'GET',
@@ -42,13 +41,12 @@ export class Api {
         name: data.name,
         about: data.about
       })
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      return Promise.reject(`Ошибка: ${res.status}`);
     })
-      .then((res) => {
-        if (res.ok) {
-          return res.json();
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-      })
       .catch((err) => console.log(err));
   }
 
@@ -57,7 +55,7 @@ export class Api {
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data
+        avatar: data.avatar
       })
     }).then((res) => {
       if (res.ok) {

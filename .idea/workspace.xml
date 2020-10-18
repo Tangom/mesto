@@ -21,15 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__edit-image/profile__edit-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__edit-image/profile__edit-image.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__image/profile__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__image/profile__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__edit-image/profile__edit-image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-image/profile__avatar-image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__image/profile__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +158,7 @@
       <workItem from="1602657206959" duration="29823000" />
       <workItem from="1602738692312" duration="7740000" />
       <workItem from="1602798143083" duration="1281000" />
-      <workItem from="1602826360015" duration="83185000" />
+      <workItem from="1602826360015" duration="113833000" />
     </task>
     <servers />
   </component>

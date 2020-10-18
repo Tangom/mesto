@@ -5,7 +5,7 @@ export class Section {
     this._container = document.querySelector(containerSelector);
   }
 
-  addItem(element, append = true){
+  addItem(element, append = true) {
     if (append) {
       this._container.append(element);
     } else {

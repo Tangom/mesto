@@ -1,32 +1,3 @@
-import './index.css';
-import {Section} from '../components/Section.js';
-import {Card} from '../components/Card.js';
-import {UserInfo} from '../components/UserInfo.js';
-import {FormValidator} from '../components/FormValidator.js';
-import {PopupWithImage} from '../components/PopupWithImage.js';
-import {PopupWithForm} from '../components/PopupWithForm.js';
-import {PopupWithSubmit} from '../components/PopupWithSubmit.js';
-import {Api} from '../components/Api.js';
-
-const profile = document.querySelector('.profile');
-const popupOpenProfile = profile.querySelector('.profile__edit');
-const popupOpenCard = profile.querySelector('.profile__add-image');
-const popupEditAvatar = profile.querySelector('.profile__edit-image');
-
-const popupAvatar = document.querySelector('.popup_avatar');
-const popupCard = document.querySelector('.popup_card');
-const popupProfile = document.querySelector('.popup_profile');
-
-const elements = ('.elements');
-const profileName = ('.profile__name-field');
-const profileAvatar = ('.profile__image');
-const profileCareer = ('.profile__career-field');
-const popupProfileSelector = ('.popup_profile');
-const popupAvatarSelector = ('.popup_avatar');
-const popupCardSelector = ('.popup_card');
-const popupConfirmSelector = ('.popup_confirm');
-const popupPhoto = ('.popup_photo')
-
 // import SanDiego from '../images/SanDiego,UnitedStates.jpg';
 // import PortWaikato from '../images/PortWaikato,NewZealand.jpg' ;
 // import Hrensko from '../images/Hřensko,Czechia.jpg';
@@ -59,6 +30,35 @@ const popupPhoto = ('.popup_photo')
 //     link: Puntarenas
 //   }
 // ]
+
+import './index.css';
+import {Section} from '../components/Section.js';
+import {Card} from '../components/Card.js';
+import {UserInfo} from '../components/UserInfo.js';
+import {FormValidator} from '../components/FormValidator.js';
+import {PopupWithImage} from '../components/PopupWithImage.js';
+import {PopupWithForm} from '../components/PopupWithForm.js';
+import {PopupWithSubmit} from '../components/PopupWithSubmit.js';
+import {Api} from '../components/Api.js';
+
+const profile = document.querySelector('.profile');
+const popupOpenProfile = profile.querySelector('.profile__edit');
+const popupOpenCard = profile.querySelector('.profile__add-image');
+const popupEditAvatar = profile.querySelector('.profile__avatar-image');
+
+const popupAvatar = document.querySelector('.popup_avatar');
+const popupCard = document.querySelector('.popup_card');
+const popupProfile = document.querySelector('.popup_profile');
+
+const elements = ('.elements');
+const profileName = ('.profile__name-field');
+const profileAvatar = ('.profile__avatar');
+const profileCareer = ('.profile__career-field');
+const popupProfileSelector = ('.popup_profile');
+const popupAvatarSelector = ('.popup_avatar');
+const popupCardSelector = ('.popup_card');
+const popupConfirmSelector = ('.popup_confirm');
+const popupPhoto = ('.popup_photo')
 
 const listSelector = {
   formSelector: '.popup__form',
@@ -115,6 +115,7 @@ api.getAllData()
     const [profile, cards] = data;
     const myId = profile._id;
     user.setUserInfo(profile);
+    user.setUserAvatar(profile);
 
     const section = new Section({
       items: cards,
@@ -152,15 +153,16 @@ api.getAllData()
 
   })
 
-
 const popupSubmit = new PopupWithSubmit({
   popupSelector: popupConfirmSelector,
   submitForm: (data) => {
+    popupSubmit.loading(true)
     api.deleteCard(data)
       .then(() => {
         data.makeDelete();
       })
       .finally(() => {
+        popupSubmit.loading(false)
         popupSubmit.close();
       })
   }
@@ -170,7 +172,7 @@ const popupAvatarForm = new PopupWithForm({
   popupSelector: popupAvatarSelector,
   submitForm: (data) => {
     popupAvatarForm.loading(true);
-    api.patchUserAvatar(data.avatar)
+    api.patchUserAvatar(data)
       .then(() => {
         user.setUserAvatar(data);
       })
@@ -208,7 +210,6 @@ popupOpenProfile.addEventListener('click', () => {
   popupProfileForm.open(user.getUserInfo());
   profileValidator.reset();
 });
-
 
 popupEditAvatar.addEventListener('click', () => {
   popupAvatarForm.open();

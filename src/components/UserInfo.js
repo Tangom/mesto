@@ -9,21 +9,19 @@ export class UserInfo {
   getUserInfo() {
     const userInfo = {
       name: this._profileName.textContent,
-      info: this._profileCareer.textContent,
-      avatar: this._profileAvatar.src,
-      id: this._id
+      about: this._profileCareer.textContent,
     };
     return userInfo;
   }
 
-
   setUserInfo(data) {
     this._profileName.textContent = data.name;
-    this._profileCareer.textContent = data.info;
-    this._id = data.id;
+    this._profileCareer.textContent = data.about;
+    this._id = data._id;
   }
 
   setUserAvatar(data) {
     this._profileAvatar.src = data.avatar;
   }
 }
+
