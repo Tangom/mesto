@@ -16,7 +16,6 @@ export class Api {
         // если ошибка, отклоняем промис
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   getInitialCards() {
@@ -30,7 +29,6 @@ export class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   patchProfileEditing(data) {
@@ -47,7 +45,6 @@ export class Api {
       }
       return Promise.reject(`Ошибка: ${res.status}`);
     })
-      .catch((err) => console.log(err));
   }
 
   patchUserAvatar(data) {
@@ -63,7 +60,6 @@ export class Api {
       }
       return Promise.reject(`Ошибка: ${res.status}`);
     })
-      .catch((err) => console.log(err));
   }
 
   postAddCard(item) {
@@ -81,7 +77,6 @@ export class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   deleteCard(data) {
@@ -95,7 +90,6 @@ export class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   deleteLike(data) {
@@ -109,7 +103,6 @@ export class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   putLikeCard(data) {
@@ -123,7 +116,6 @@ export class Api {
         }
         return Promise.reject(`Ошибка: ${res.status}`);
       })
-      .catch((err) => console.log(err));
   }
 
   getAllData() {

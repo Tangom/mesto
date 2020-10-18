@@ -7,6 +7,8 @@ export class FormValidator {
     this._inactiveButtonClass = listSelector.inactiveButtonClass;
     this._inputErrorClass = listSelector.inputErrorClass;
     this._errorClass = listSelector.errorClass;
+    this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
+    this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
   }
 
 
@@ -36,47 +38,40 @@ export class FormValidator {
   };
 
   // Проверяем заполнение всех полей
-  _hasInvalidInput(inputList) {
-    return inputList.some((inputElement) => {
+  _hasInvalidInput() {
+    return this._inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   }
 
   //Она отключает и включает кнопку
-  _toggleButtonState(inputList, buttonElement) {
-    if (this._hasInvalidInput(inputList)) {
-      buttonElement.classList.add(this._inactiveButtonClass);
-      buttonElement.disabled = true;
+  _toggleButtonState() {
+    if (this._hasInvalidInput()) {
+      this._buttonElement.classList.add(this._inactiveButtonClass);
+      this._buttonElement.disabled = true;
     } else {
-      buttonElement.classList.remove(this._inactiveButtonClass);
-      buttonElement.disabled = false;
+      this._buttonElement.classList.remove(this._inactiveButtonClass);
+      this._buttonElement.disabled = false;
     }
   }
 
   reset() {
     if (this._formElement != null) {
-      const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
-      const buttonElement = this._formElement.querySelector(this._submitButtonSelector);
-      this._toggleButtonState(inputList, buttonElement);
-      inputList.forEach((inputElement) => {
+      this._toggleButtonState();
+      this._inputList.forEach((inputElement) => {
         this._hideInputError(inputElement)
       })
     }
   }
 
   _setEventListeners() {
-    const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
-    const buttonElement = this._formElement.querySelector(this._submitButtonSelector);
     // Чтобы проверить состояние кнопки в самом начале
-    this._toggleButtonState(inputList, buttonElement);
-    inputList.forEach((inputElement) => {
-        // if (this._formElement != null) {
-        //   this._hideInputError(inputElement)
-        // }
+    this._toggleButtonState();
+    this._inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', () => {
           this._checkInputValidity(inputElement);
           // Чтобы проверять его при изменении любого из полей
-          this._toggleButtonState(inputList, buttonElement);
+          this._toggleButtonState();
         });
       }
     );

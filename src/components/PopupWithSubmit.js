@@ -19,11 +19,8 @@ export class PopupWithSubmit extends Popup {
     this._item = item;
   }
 
-  close() {
-    super.close();
-  }
 
-  loading(waiting) {
+  waitLoading(waiting) {
     if (waiting) {
       this._popup.querySelector('.popup__save').textContent = 'Удаление...';
     } else {

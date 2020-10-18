@@ -39,7 +39,7 @@ export class Card {
       this._deleted.classList.add('element__deleted_disable');
     }
 
-    this._likeToggle();
+    this._handleLikeButton();
     this._setEventListeners();
     return this._element;
   }
@@ -47,10 +47,10 @@ export class Card {
   countLike(data) {
     this._likes = data.likes.length;
     this._liked = !this._liked;
-    this._likeToggle();
+    this._handleLikeButton();
   }
 
-  _likeToggle() {
+  _handleLikeButton() {
     this._count.textContent = this._likes;
     if (this._liked) {
       this._elementLike.classList.add('element__like_active');
@@ -59,7 +59,7 @@ export class Card {
     }
   }
 
-  myLike() {
+  makeMyLike() {
     return this._liked;
   }
 

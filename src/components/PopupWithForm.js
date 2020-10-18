@@ -28,7 +28,7 @@ export class PopupWithForm extends Popup {
     this._popup.querySelector('.popup__form').reset();
   }
 
-  loading(waiting) {
+  waitLoading(waiting) {
     if (waiting) {
       this._popup.querySelector('.popup__save').textContent = 'Сохранение...';
     } else {

@@ -74,35 +74,46 @@ const listSelector = {
 
 const photo = new PopupWithImage(popupPhoto);
 const user = new UserInfo(profileName, profileCareer, profileAvatar);
-const handleCardClick = (data) => photo.open(data);
-const handleDeleteCard = (data) => popupSubmit.open(data);
-const handleLikeClick = (data) => {
-  if (data.myLike()) {
-    api.deleteLike(data)
-      .then((item) => {
-        data.countLike(item);
-      })
-  } else {
-    api.putLikeCard(data)
-      .then((item) => {
-        data.countLike(item);
-      })
-  }
+
+function createCard(data, myId) {
+  const newCard = new Card({
+    data,
+    handleCardClick: (data) => photo.open(data),
+    handleDeleteCard: (data) => popupSubmit.open(data),
+    handleLikeClick: (data) => {
+      if (data.makeMyLike()) {
+        api.deleteLike(data)
+          .then((item) => {
+            data.countLike(item);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      } else {
+        api.putLikeCard(data)
+          .then((item) => {
+            data.countLike(item);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
+    },
+    myId
+  }, '.template');
+
+  return newCard.generateCard();
 }
 
-const card = (data, myId) => new Card({data, handleCardClick, handleDeleteCard, handleLikeClick, myId}, '.template');
-const validator = (popup) => new FormValidator(listSelector, popup.querySelector(listSelector.formSelector));
-const cardValidator = validator(popupCard);
-const profileValidator = validator(popupProfile);
-const avatarValidator = validator(popupAvatar);
+
+const cardValidator = new FormValidator(listSelector, popupCard.querySelector(listSelector.formSelector));
+const profileValidator = new FormValidator(listSelector, popupProfile.querySelector(listSelector.formSelector));
+const avatarValidator = new FormValidator(listSelector, popupAvatar.querySelector(listSelector.formSelector));
 
 cardValidator.enableValidation();
 profileValidator.enableValidation();
 avatarValidator.enableValidation();
 
-function createCard(data, myId) {
-  return card(data, myId).generateCard();
-}
 
 const api = new Api({
   url: 'https://mesto.nomoreparties.co/v1/cohort-16',
@@ -131,7 +142,7 @@ api.getAllData()
     const popupCardForm = new PopupWithForm({
       popupSelector: popupCardSelector,
       submitForm: (item) => {
-        popupCardForm.loading(true);
+        popupCardForm.waitLoading(true);
         api.postAddCard({
           name: item.place,
           link: item.link
@@ -139,8 +150,11 @@ api.getAllData()
           .then((item) => {
             section.addItem((createCard(item, myId)), false);
           })
+          .catch((err) => {
+            console.log(err);
+          })
           .finally(() => {
-            popupCardForm.loading(false);
+            popupCardForm.waitLoading(false);
             popupCardForm.close();
           })
       }
@@ -158,13 +172,16 @@ api.getAllData()
 const popupSubmit = new PopupWithSubmit({
   popupSelector: popupConfirmSelector,
   submitForm: (data) => {
-    popupSubmit.loading(true)
+    popupSubmit.waitLoading(true)
     api.deleteCard(data)
       .then(() => {
         data.makeDelete();
       })
+      .catch((err) => {
+        console.log(err);
+      })
       .finally(() => {
-        popupSubmit.loading(false)
+        popupSubmit.waitLoading(false)
         popupSubmit.close();
       })
   }
@@ -173,13 +190,16 @@ const popupSubmit = new PopupWithSubmit({
 const popupAvatarForm = new PopupWithForm({
   popupSelector: popupAvatarSelector,
   submitForm: (data) => {
-    popupAvatarForm.loading(true);
+    popupAvatarForm.waitLoading(true);
     api.patchUserAvatar(data)
       .then(() => {
         user.setUserAvatar(data);
       })
+      .catch((err) => {
+        console.log(err);
+      })
       .finally(() => {
-        popupAvatarForm.loading(false);
+        popupAvatarForm.waitLoading(false);
         popupAvatarForm.close();
       })
   }
@@ -188,13 +208,16 @@ const popupAvatarForm = new PopupWithForm({
 const popupProfileForm = new PopupWithForm({
   popupSelector: popupProfileSelector,
   submitForm: (data) => {
-    popupProfileForm.loading(true);
+    popupProfileForm.waitLoading(true);
     api.patchProfileEditing(data)
       .then((res) => {
         user.setUserInfo(res);
       })
+      .catch((err) => {
+        console.log(err);
+      })
       .finally(() => {
-        popupProfileForm.loading(false);
+        popupProfileForm.waitLoading(false);
         popupProfileForm.close();
       })
   }
