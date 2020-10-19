@@ -19,7 +19,6 @@ export class PopupWithSubmit extends Popup {
     this._item = item;
   }
 
-
   waitLoading(waiting) {
     if (waiting) {
       this._popup.querySelector('.popup__save').textContent = 'Удаление...';

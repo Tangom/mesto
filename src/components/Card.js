@@ -7,10 +7,7 @@ export class Card {
     this._handleDeleteCard = handleDeleteCard.bind(this);
     this._handleLikeClick = handleLikeClick;
     this._likes = data.likes.length;
-    this._liked = data.likes.some((like) => {
-      return like._id === myId;
-    })
-    this._myId = myId;
+    this._liked = data.likes.some(like => like._id === myId);
     this._myId = data.owner._id === myId;
     this._id = data._id;
   }

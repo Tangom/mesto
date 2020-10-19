@@ -21,12 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="31571f38-a2b5-4747-a2b2-045bdcbf6f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithSubmit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +150,9 @@
       <workItem from="1602738692312" duration="7740000" />
       <workItem from="1602798143083" duration="1281000" />
       <workItem from="1602826360015" duration="114417000" />
-      <workItem from="1603006608513" duration="9039000" />
+      <workItem from="1603006608513" duration="10954000" />
+      <workItem from="1603100399772" duration="1706000" />
+      <workItem from="1603136125329" duration="988000" />
     </task>
     <servers />
   </component>
